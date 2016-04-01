@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+function getByclass(oparent,sclass){
+	var aResult=[];
+	var aEle=oparent.getElementsByTagName('*');
+	for(var i=0;i<aEle.length;i++){
+		
+		if(aEle[i].className==sclass){
+			
+			aResult.push(aEle[i]);
+			
+		}
+		
+		
+	};
+	return aResult;
+	
+	
+};
+
+
+
+
+
+
+
+
+
+window.onload=function()
+{
+ var oUl=document.getElementById('ul1');
+var aBox=getByclass(oUl,'box');
+for(var i=0;i<aBox.length;i++){
+      aBox[i].style.background='yellow';	
+	
+};
+
+
+};
+
+
+
+</script>
+
+
+
+</head>
+
+<body>
+<ul id="ul1">
+
+  <li class="box"></li>
+  <li></li>
+  <li class="box"></li>
+  <li></li>
+  <li class="box"></li>
+
+
+</ul>
+</body>
+</html>
